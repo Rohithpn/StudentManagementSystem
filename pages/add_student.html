@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+</head>
+<body>
+    <h2>Add Student</h2>
+    <form id="addStudentForm">
+        <label for="id">Student ID:</label>
+        <input type="text" id="id" required>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required>
+
+        <label for="grade">Grade:</label>
+        <input type="text" id="grade" required>
+
+        <label for="medical_condition">Medical Condition:</label>
+        <input type="text" id="medical_condition">
+
+        <button type="submit">Add Student</button>
+    </form>
+
+    <button onclick="window.location.href='../dashboard.html'">Back</button>
+    <script type="module">
+        import { addStudent } from '../database.js';
+
+        document.getElementById('addStudentForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const id = document.getElementById('id').value;
+            const name = document.getElementById('name').value;
+            const dob = document.getElementById('dob').value;
+            const grade = document.getElementById('grade').value;
+            const medical_condition = document.getElementById('medical_condition').value;
+
+            await addStudent(id, name, dob, grade, medical_condition);
+
+            alert("Student Added Successfully!");
+        });
+    </script>
+</body>
+</html>
+<style>
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Form Container */
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Heading */
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    text-align: left;
+    display: block;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+/* Buttons */
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+/* Add Student Button */
+button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Back Button */
+button:last-of-type {
+    background-color: #dc3545;
+    color: white;
+    margin-top: 10px;
+}
+
+button:last-of-type:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+    }
+}
+
+</style>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  
+    <div class="login_container">
+        <div class="logo">
+            
+        </div>
+        <div class="login_form">
+            <fieldset class="fieldset">
+                <legend>Email</legend>
+            <input type="email" id="email"  required>
+        </fieldset>
+        
+           <fieldset class="fieldset">
+            <legend>Password</legend>
+            <input type="password" id="password" required>
+           </fieldset>
+            <button id="loginBtn">Login</button>
+
+        </div>
+    </div>
+    
+    <!-- ✅ Place script at the bottom to ensure the DOM loads first -->
+    <script type="module">
+        import { login } from "./auth.js";
+
+        // ✅ Ensure the script runs after the page is fully loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            const loginBtn = document.getElementById("loginBtn");
+            if (loginBtn) {
+                loginBtn.addEventListener("click", login);
+            } else {
+                console.error("loginBtn not found in the DOM!");
+            }
+        });
+    </script>
+</body>
+</html>

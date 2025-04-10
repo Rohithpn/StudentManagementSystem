@@ -1,0 +1,17 @@
+{
+  "name": "student-management-system",
+  "version": "1.0.0",
+  "description": "An Electron-based Student Management System",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "firebase": "^11.3.1"
+  },
+  "devDependencies": {
+    "electron": "^34.2.0",
+    "electron-packager": "^17.1.2"
+  }
+}
