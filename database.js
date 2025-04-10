@@ -1,6 +1,6 @@
 import { supabase } from './supabase-config.js';
 
-// ✅ Add Student with user-provided ID
+
 async function addStudent(id, name, dob, grade, medical_condition) {
     const { data, error } = await supabase
         .from("students")
@@ -13,7 +13,7 @@ async function addStudent(id, name, dob, grade, medical_condition) {
     }
 }
 
-// ✅ Fetch All Students
+
 async function fetchStudents() {
     const { data, error } = await supabase.from("students").select("*");
 
@@ -25,7 +25,7 @@ async function fetchStudents() {
     }
 }
 
-// ✅ Update Student by ID
+
 async function updateStudent(id, updatedFields) {
     const { data, error } = await supabase.from("students").update(updatedFields).eq("id", id);
 
@@ -36,7 +36,7 @@ async function updateStudent(id, updatedFields) {
     }
 }
 
-// Delete Student
+
 async function deleteStudent(id) {
     const { data, error } = await supabase.from("students").delete().eq("id", id);
 
