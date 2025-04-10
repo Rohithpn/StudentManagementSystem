@@ -11,7 +11,7 @@
             const students = await fetchStudents();
 
             const tableBody = document.getElementById("studentTable");
-            tableBody.innerHTML = ""; // Clear previous data
+            tableBody.innerHTML = ""; 
 
             students.forEach(student => {
                 const row = document.createElement("tr");
@@ -50,7 +50,7 @@
         }
 
         document.addEventListener("DOMContentLoaded", displayStudents);
-        window.update = update; // Expose functions to global scope
+        window.update = update; 
         window.remove = remove;
     </script>
 </head>
@@ -68,14 +68,14 @@
             </tr>
         </thead>
         <tbody id="studentTable">
-            <!-- Students will be inserted here dynamically -->
+            
         </tbody>
     </table>
     <button onclick="window.location.href='../dashboard.html'">Back</button>
 </body>
 </html>
 <style>
-    /* General Styles */
+    
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -88,17 +88,16 @@ body {
     min-height: 100vh;
 }
 
-/* Heading */
+
 h2 {
     color: #333;
     margin-bottom: 20px;
 }
 
-/* Table Styling */
-/* Table Styling */
+
 table {
-    width: 95%; /* Increase width to take more space */
-    max-width: 1000px; /* Allow more space */
+    width: 95%; 
+    max-width: 1000px; 
     border-collapse: collapse;
     background: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -107,12 +106,12 @@ table {
     margin-bottom: 50px;
 }
 
-/* Table Cells */
+
 th, td {
-    padding: 15px; /* Increase padding for better spacing */
+    padding: 15px; 
     text-align: left;
     border-bottom: 1px solid #ddd;
-    min-width: 150px; /* Set minimum width for cells */
+    min-width: 150px; 
     
 }
 
@@ -121,9 +120,9 @@ th {
     color: white;
 }
 
-/* Input Fields in Table */
+
 input {
-    width: 80%; /* Ensure inputs take full cell width */
+    width: 80%; 
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -137,7 +136,7 @@ input:focus {
 }
 
 
-/* Action Buttons */
+
 button {
     background-color: #007bff;
     color: white;
@@ -155,7 +154,7 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Delete Button */
+
 button:last-child {
     background-color: #dc3545;
 }
@@ -164,7 +163,7 @@ button:last-child:hover {
     background-color: #c82333;
 }
 
-/* Back Button */
+
 .back-btn {
     margin-top: 200px;
     background-color: #6c757d;
@@ -182,7 +181,7 @@ button:last-child:hover {
     transform: scale(1.05);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     table {
         width: 100%;

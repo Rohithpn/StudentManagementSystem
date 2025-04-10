@@ -6,7 +6,7 @@
     <script type="module">
         import { logout } from "./auth.js";
     
-        // ✅ Ensure the script runs after the page is fully loaded
+        
         document.addEventListener("DOMContentLoaded", function () {
             const logoutBtn = document.getElementById("logout-btn");
             if (logoutBtn) {
@@ -34,21 +34,21 @@
 
 </html>
 <style>
- /* General Styles */
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    height: 100vh; /* Full viewport height */
+    height: 100vh; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-/* Dashboard Container */
+
 .dashboard-container {
     background: white;
     padding: 30px;
@@ -58,13 +58,13 @@ body {
     max-width: 600px;
 }
 
-/* Heading */
+
 h1 {
     color: #333;
     margin-bottom: 20px;
 }
 
-/* Menu Buttons */
+
 .menu {
     display: flex;
     flex-direction: column;
@@ -90,7 +90,7 @@ h1 {
     transform: scale(1.05);
 }
 
-/* Logout Button */
+
 #logout-btn {
     margin-top: 30px;
     padding: 12px;
@@ -109,7 +109,7 @@ h1 {
     transform: scale(1.05);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .dashboard-container {
         width: 90%;

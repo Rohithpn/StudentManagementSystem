@@ -15,7 +15,7 @@ async function login() {
     } else {
         console.log("Login successful:", data);
        
-        window.location.href = "dashboard.html"; // Redirect to home page after login
+        window.location.href = "dashboard.html"; 
     }
 }
 async function logout() {
@@ -25,10 +25,10 @@ async function logout() {
         return;
     }
    
-    window.location.href = "index.html"; // Redirect to login page
+    window.location.href = "index.html"; 
 }
 
-// ✅ Make sure to export the function
+
 export { login };
 
 export { logout };

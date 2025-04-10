@@ -6,7 +6,7 @@ document.getElementById("login-btn").addEventListener("click", () => {
 
     signInWithEmailAndPassword(auth, email, password)
         .then(() => {
-            window.location.href = "pages/home.html";  // Redirect after login
+            window.location.href = "pages/home.html";  
         })
         .catch(error => {
             document.getElementById("error-message").innerText = error.message;

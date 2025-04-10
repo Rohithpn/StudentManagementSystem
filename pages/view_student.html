@@ -11,7 +11,7 @@
             const students = await fetchStudents();
 
             const tableBody = document.getElementById("studentTable");
-            tableBody.innerHTML = ""; // Clear previous data
+            tableBody.innerHTML = "";
 
             students.forEach(student => {
                 const row = document.createElement("tr");
@@ -42,14 +42,14 @@
             </tr>
         </thead>
         <tbody id="studentTable">
-            <!-- Students will be inserted here dynamically -->
+           
         </tbody>
     </table>
     <button onclick="window.location.href='../dashboard.html'">Back</button>
 </body>
 </html>
 <style>
-    /* General Styles */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -62,13 +62,13 @@ body {
     min-height: 100vh;
 }
 
-/* Heading */
+
 h2 {
     color: #333;
     margin-bottom: 20px;
 }
 
-/* Table Styling */
+
 table {
     width: 90%;
     max-width: 800px;
@@ -94,7 +94,7 @@ tr:hover {
     background-color: #f1f1f1;
 }
 
-/* Back Button */
+
 button {
     margin-top: 20px;
     background-color: #6c757d;
@@ -112,7 +112,7 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     table {
         width: 100%;

@@ -8,13 +8,13 @@ body {
     align-items: center;
 }
 input {
-    border: 1px solid #ccc; /* Normal border */
-    outline: none; /* Removes the default highlight */
+    border: 1px solid #ccc; 
+    outline: none; 
 }
 
 input:focus {
-    border: 1px solid #ccc; /* Keeps the same border when focused */
-    box-shadow: none; /* Ensures there's no glow or shadow */
+    border: 1px solid #ccc; 
+    box-shadow: none; 
 }
 
 

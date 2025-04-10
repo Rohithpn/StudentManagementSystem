@@ -8,13 +8,13 @@ app.whenReady().then(() => {
         width: 1200,
         height: 800,
         webPreferences: {
-            preload: path.join(__dirname, "./preload.js"), // Optional
-            nodeIntegration: true, // Allow Node.js modules in the app
+            preload: path.join(__dirname, "./preload.js"), 
+            nodeIntegration: true, 
             contextIsolation: false
         }
     });
 
-    mainWindow.loadFile("./index.html"); // Load your main HTML file
+    mainWindow.loadFile("./index.html"); 
 
     mainWindow.on("closed", () => {
         mainWindow = null;
